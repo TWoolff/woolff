@@ -1,12 +1,10 @@
 .footer {
-    width: 100%;
-    height: var(--footer-height);
-    background-color: var(--color-black);
-    color: var(--color-white);
+    grid-area: footer;
+    align-items: end;
+    padding-bottom: 3rem;
 
-    & a {
-        color: var(--color-white);
-    
+    & h2 {
+        text-transform: uppercase;
     }
 }
 
@@ -15,6 +13,15 @@
 }
 
 .contact {
-    grid-column: 6 / -1;
+    grid-column: 6 / 9;
+}
+
+.copyright {
+    grid-column: 10 / -1;
+    justify-self: end;
+
+    & p {
+        font-size: 0.8rem;
+    }
 }
 

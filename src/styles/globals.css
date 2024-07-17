@@ -8,10 +8,17 @@ html,
 body {
     font-family: var(--font-body);
     font-size: 16px;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: 6rem 1fr 10rem;
+    grid-template-areas: 
+        "header" 
+        "content" 
+        "footer";
 }
 
 main {
-    min-height: calc(100dvh - var(--footer-height));
+    grid-area: content;
 }
 
 a {
@@ -27,10 +34,10 @@ a:before {
     display: inline-block;
     height: 8px;
     width: 0px;
-    left: -10px;
+    left: -12px;
     top: 50%;
     transform: translateX(8px) translateY(-50%);
-    background-color: var(--color-black); /* Ensure the square is visible */
+    background-color: var(--color-black);
     transition: all 0.2s;
 }
 
@@ -48,4 +55,8 @@ a:hover:before {
     @media (min-width: 768px) {
         grid-template-columns: repeat(12, 1fr);
     }
+}
+
+.pagewrapper {
+    grid-column: 1 / -1;
 }

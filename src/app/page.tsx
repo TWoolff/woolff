@@ -1,6 +1,6 @@
 const Home: React.FC = () => {
   return (
-    <section>
+    <section className='pagewrapper'>
       <h1>Index</h1>
     </section>
   )

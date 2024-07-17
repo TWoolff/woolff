@@ -10,8 +10,11 @@ const Footer: React.FC = () => {
             </div>
             <div className={css.contact}>
                 <h2>Contact</h2>
-                <p>Mail: <a href="mailto:hello@woolff.dk">hello@woolff.dk</a></p>
-                <p>Phn: <a href="tel:+4531410046">+45 31 41 00 46</a></p>
+                <p><a href="mailto:hello@woolff.dk">Mail: hello@woolff.dk</a></p>
+                <p><a href="tel:+4531410046">Phn: +45 31 41 00 46</a></p>
+            </div>
+            <div className={css.copyright}>
+                <p>&copy; 2024 Woolff</p>
             </div>
         </footer>
     );
