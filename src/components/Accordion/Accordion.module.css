@@ -4,6 +4,9 @@
     border-bottom: 1px solid var(--color-black);
     margin: 0 0 1rem;
     padding: 0 0 1rem 0;
+    max-height: 4rem;
+    overflow: hidden;
+    transition: max-height 800ms ease-out;
 
     & h2 {
         cursor: pointer;
@@ -21,38 +24,44 @@
             max-width: 30rem;
         }
     }
+
+    & summary {
+        list-style: none;
+    }
     
-}
+    & input {
+        display: none; 
+    }
+    
+    & label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 4rem;
+        font-weight: 600;
+    }
+    
+    & label:hover {
+        cursor: pointer;
+    }
+    
+    & label::before {
+        content: '+';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+        line-height: 1;
+    }
 
-.accordion summary {
-    list-style: none;
-    position: relative;
-    padding: 1rem 0;
-}
-
-.accordion summary::before {
-    content: '+';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.5rem;
-    line-height: 1;
-}
-
-.accordion[open] summary::before {
-    content: '-';
-}
-
-
-.accordion {
-        max-height: 10rem;
-        overflow: hidden;
-        transition: max-height 400ms ease-out;
+    & input:checked + label:before {
+        content: '-';
+    }
 }
 
 .accordion & input:checked + .accordion, .accordion:has(input:checked) {
-    max-height: 800px;
+    max-height: 300rem;
 }
 
 .link {

@@ -11,9 +11,9 @@ type AccordionProps = {
 const Accordion: React.FC<AccordionProps> = ({title, content, link, image}) => {
     return ( 
         <details className={css.accordion} open>
-            <input type="checkbox" name="detail-three" id="detail-three" />
             <summary>
-                <h2>{title}</h2>
+                <input type="checkbox" name="input" id="input" />
+                <label htmlFor="input">{title}</label>
             </summary>
             <article>
                 <p>{content}</p>
