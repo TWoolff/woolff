@@ -5,8 +5,8 @@ const Footer: React.FC = () => {
         <footer className={`grid ${css.footer}`}>
             <div className={css.services}>
                 <h2>Services</h2>
-                <p>Digital Design</p>
                 <p>Creative Development</p>
+                <p>Digital Design</p>
             </div>
             <div className={css.contact}>
                 <h2>Contact</h2>

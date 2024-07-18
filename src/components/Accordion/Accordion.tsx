@@ -12,14 +12,17 @@ const Accordion: React.FC<AccordionProps> = ({title, content, link, image}) => {
     return ( 
         <details className={css.accordion} open>
             <summary>
-                <input type="checkbox" name="input" id="input" />
-                <label htmlFor="input">{title}</label>
+                <input type='checkbox' name='input' id='input' />
+                <label htmlFor='input'>{title}</label>
             </summary>
             <article>
                 <p>{content}</p>
                 <Link href={link} className={css.link}>View project</Link>
             </article>
-            <div className={css.image} style={{ backgroundImage: `url(${image})` }} />
+            <Link href={link} className={css.link}>
+                <div className={css.image} style={{ backgroundImage: `url(${image})` }} />
+            </Link>
+            
         </details>
 
     )
