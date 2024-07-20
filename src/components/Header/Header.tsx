@@ -4,7 +4,7 @@ import css from './Header.module.css';
 const Header: React.FC = () => {
     return ( 
         <header className={`grid ${css.header}`}>
-            <h1>Woolff</h1>
+            <h2>Woolff</h2>
 			<nav>
 				<ul>
 					<li><TransitionLink href='/'>Index</TransitionLink></li>

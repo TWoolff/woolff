@@ -9,18 +9,32 @@
 }
 
 .services {
-    grid-column: 1 / 6;
+    grid-column: 1 / -1;
+
+    @media (min-width: 768px) {
+        grid-column: 1 / 6;
+    }
 }
 
 .contact {
-    grid-column: 6 / 9;
+    grid-column: 1 / -1;
+
+    @media (min-width: 768px) {
+        grid-column: 6 / 9;
+    }
 }
 
 .copyright {
-    grid-column: 10 / -1;
+    grid-column: 1 / -1;
     justify-self: end;
+    padding: 2rem 0;
 
     & p {
         font-size: 0.8rem;
+    }
+
+    @media (min-width: 768px) {
+        grid-column: 10 / -1;
+        padding: 0;
     }
 }
