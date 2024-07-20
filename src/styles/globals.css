@@ -15,7 +15,7 @@ body {
         "header" 
         "content" 
         "footer";
-    transition-property: opacity, filter, background;
+    transition-property: opacity, filter;
     transition-timing-function: ease-in-out;
     transition-duration: 500ms;
 }
@@ -66,6 +66,5 @@ a:hover:before {
 
 .page-transition {
     opacity: 0;
-    background: var(--color-black);
-    filter: blur(12px);
+    filter: blur(24px);
 }
