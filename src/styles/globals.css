@@ -67,5 +67,5 @@ a:hover:before {
 
 .page-transition {
     opacity: 0;
-    filter: blur(24px);
+    //filter: blur(24px);
 }

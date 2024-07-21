@@ -1,13 +1,15 @@
 import { Dispatch } from "react";
 
-
 export type ErrorState = string | null;
 
-export type State = {};
+export type State = {
+    route: string;
+    error?: ErrorState;
+};
 
 export type Action = {
-    type: 'SET_STATE';
-    payload?: Partial<State>;
+    type: 'SET_STATE' | 'ROUTE_CHANGE';
+    payload?: Partial<State> | string;
 };
 
 

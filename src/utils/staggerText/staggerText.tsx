@@ -1,5 +1,7 @@
 'use client'
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
+import { useAppContext } from '@/app/context';
 import css from './staggerText.module.css';
 
 const DURATION = 0.25;
@@ -10,7 +12,11 @@ type StaggerTextProps = {
 };
 
 export const StaggerText: React.FC<StaggerTextProps> = ({ children }) => {
+    const { state } = useAppContext() || {};
+    const controls = useAnimation();
     const letters = children.split('');
+
+    console.log(state)
 
     const containerVariants = {
         initial: {},
@@ -34,10 +40,16 @@ export const StaggerText: React.FC<StaggerTextProps> = ({ children }) => {
         },
     };
 
+    useEffect(() => {
+        if (state?.route) {
+            controls.start('animate');
+        }
+    }, [state?.route, controls]);
+
     return (
         <motion.h2
             initial="initial"
-            animate="animate"
+            animate={controls}
             className={css.staggerText}
             variants={containerVariants}
         >
