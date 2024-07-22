@@ -16,8 +16,6 @@ export const StaggerText: React.FC<StaggerTextProps> = ({ children }) => {
     const controls = useAnimation();
     const letters = children.split('');
 
-    console.log(state)
-
     const containerVariants = {
         initial: {},
         animate: {
